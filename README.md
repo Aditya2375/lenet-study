@@ -1,6 +1,8 @@
 # LeNet Study
 
-A paper-to-code study of LeNet-5 from LeCun, Bottou, Bengio and Haffner, 1998, *Gradient-Based Learning Applied to Document Recognition*. Work in progress: local modern-optimizer results are measured below, but the historical optimizer failed and publication/live-demo inspection are unfinished.
+Live study: https://aditya2375.github.io/lenet-study/
+
+A paper-to-code study of LeNet-5 from LeCun, Bottou, Bengio and Haffner, 1998, *Gradient-Based Learning Applied to Document Recognition*. The historical optimizer attempt failed. The measured modern-optimizer results below are an architecture study and controlled extension, not a full historical-result replication.
 
 ## What is reproduced
 
