@@ -7,3 +7,5 @@ Server authorization, database rules, rate limiting, queues and money idempotenc
 Research downloads use a fixed public MNIST mirror; file hashes are recorded. The historical optimizer run failed and is guarded from blind continuation. A public failed-run record is included; checkpoints are research artifacts, not user data. Source paper/dataset copyright and license boundaries remain in README.
 
 Checkpoint loading uses weights_only=True. Early local failed-run checkpoints contained NumPy state and are not shipped or loaded by the guarded trainer. The fixed-source dataset URL is the only download scanner suppression; filenames and HTTPS origin are constants, not user input.
+
+Static scanner notes: the two remaining checkpoint serialization advisories concern local torch.load/torch.save in the guarded historical trainer. Loading explicitly sets weights_only=True; no checkpoint is accepted from the website or a user upload. The save serializes only locally constructed tensors/primitives. Do not load arbitrary untrusted checkpoints. No scanner finding is described as a universal safety guarantee.
