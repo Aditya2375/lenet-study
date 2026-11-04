@@ -1,0 +1,1 @@
+{"status":"failed numerical learning behavior","epoch":1,"steps_into_epoch_2":4507,"online_mse_epoch_1":251.53101852963766,"observation":"C3 outputs fully saturated; deeper layer curvature near zero. Do not report this as a completed reproduction or test accuracy. Investigate initialization, loss and curvature before restarting."}
