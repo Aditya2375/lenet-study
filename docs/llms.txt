@@ -1,0 +1,2 @@
+# LeNet Study
+Architecture reproduction with reconstructed RBF templates and measured modern optimizer comparisons. Historical optimizer attempt failed saturation and was not test-evaluated. Not a full historical replication. Read README for exact limits.
