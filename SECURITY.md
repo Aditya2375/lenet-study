@@ -9,3 +9,5 @@ Research downloads use a fixed public MNIST mirror; file hashes are recorded. Th
 Checkpoint loading uses weights_only=True. Early local failed-run checkpoints contained NumPy state and are not shipped or loaded by the guarded trainer. The fixed-source dataset URL is the only download scanner suppression; filenames and HTTPS origin are constants, not user input.
 
 Static scanner notes: the two remaining checkpoint serialization advisories concern local torch.load/torch.save in the guarded historical trainer. Loading explicitly sets weights_only=True; no checkpoint is accepted from the website or a user upload. The save serializes only locally constructed tensors/primitives. Do not load arbitrary untrusted checkpoints. No scanner finding is described as a universal safety guarantee.
+
+Each numeric weight shard is checked against its SHA256 in the same-origin model index before parsing. Tensor chunk offsets and finite values are validated. This detects accidental asset corruption, not a fully compromised hosting origin that could change code and hashes together.
